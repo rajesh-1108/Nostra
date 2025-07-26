@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Nostra</title>
+    <link rel="icon" type="image/x-icon" href="/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bg-primary {
+        background-color: #0a1f44;
+      }
+      .text-primary {
+        color: #0a1f44;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="offer-bar bg-primary text-white text-center py-2 text-sm">
+      <p>
+        Sign up and <strong>GET 20% OFF</strong> your first order
+        <i id="offer-close" class="fas fa-times ml-4 cursor-pointer"></i>
+      </p>
+    </div>
+    <!-- Navbar -->
+    <nav
+      class="flex items-center justify-between px-6 py-4 shadow sticky top-0 bg-white z-50"
+    >
+      <h1 class="text-2xl font-bold text-primary">Nostra</h1>
+
+      <div class="hidden md:flex gap-6">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./collection.html" class="hover:underline"
+          >Collections</a
+        >
+        <a href="./contact.html" class="hover:underline">Contact Us</a>
+      </div>
+
+      <button
+        id="side-navbar-activate"
+        class="md:hidden text-2xl focus:outline-none"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div
+      class="side-navbar fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 transform translate-x-full transition-transform duration-300"
+    >
+      <div class="flex justify-end p-4">
+        <button id="side-navbar-close" class="text-2xl focus:outline-none">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="flex flex-col px-6 space-y-4">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="./collection.html" class="hover:underline"
+          >Collections</a
+        >
+        <a href="./contact.html" class="hover:underline">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-10 px-6">
+      <div class="container mx-auto flex flex-col md:flex-row gap-8">
+        <!-- Sidebar Filters -->
+        <aside class="w-full md:w-1/4">
+          <h3 class="text-lg font-semibold mb-4">Categories</h3>
+          <div class="flex flex-col space-y-2 mb-6">
+            <!-- Categories -->
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Resort Shirts"
+              />
+              <span class="ml-2">Resort Shirts</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Hoodies"
+              />
+              <span class="ml-2">Hoodies</span>
+            </label>
+            <label class="inline-flex items-center">
+              <input
+                type="checkbox"
+                class="filter-cat h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                value="Top"
+              />
+              <span class="ml-2">Top</span>
+            </label>
+
+            <div class="pt-6 flex flex-col gap-1">
+              <h3 class="text-lg font-semibold mb-4">Genders</h3>
+
+              <!-- Genders -->
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="filter-gen h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  value="Male"
+                />
+                <span class="ml-2">Male</span>
+              </label>
+              <label class="inline-flex items-center">
+                <input
+                  type="checkbox"
+                  class="filter-gen h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary"
+                  value="Female"
+                />
+                <span class="ml-2">Female</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products & Search -->
+        <section class="w-full md:w-3/4 flex flex-col gap-6">
+          <!-- Search Box -->
+          <div>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search products..."
+              class="w-full border border-gray-300 rounded-lg p-2 focus:ring-primary focus:border-primary"
+            />
+          </div>
+
+          <!-- Products Grid -->
+          <div
+            id="product-grid"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+          >
+            <!-- Product 1 -->
+            <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-md">
+              <img
+               src="./img/clothes/dress-1.png"
+                alt="Floral Resort Shirt"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Floral Resort Shirt</h4>
+                <p class="mt-2 text-primary font-bold">$79</p>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+              src="./img/clothes/dress-2.png"
+                alt="Urban Zip Hoodie"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Urban Zip Hoodie</h4>
+                <p class="mt-2 text-primary font-bold">$59</p>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+               src="./img/clothes/dress-3.png"
+                alt="Silk Chiffon Top"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Silk Chiffon Top</h4>
+                <p class="mt-2 text-primary font-bold">$49</p>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+               src="./img/clothes/dress-4.png"
+                alt="Tropical Resort Shirt"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Tropical Resort Shirt</h4>
+                <p class="mt-2 text-primary font-bold">$89</p>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./img/clothes/dress-5.png"
+                alt="Cotton Resort Shirt"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Cotton Resort Shirt</h4>
+                <p class="mt-2 text-primary font-bold">$99</p>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+              src="./img/clothes/dress-6.png"
+                alt="Linen Button-Up Shirt"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Linen Button-Up Shirt</h4>
+                <p class="mt-2 text-primary font-bold">$109</p>
+              </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+            src="./img/clothes/dress-7.png"
+                alt="Chiffon Ruffle Top"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Chiffon Ruffle Top</h4>
+                <p class="mt-2 text-primary font-bold">$69</p>
+              </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+              src="./img/clothes/dress-8.png"
+                alt="Fleece Pullover Hoodie"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Fleece Pullover Hoodie</h4>
+                <p class="mt-2 text-primary font-bold">$75</p>
+              </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+               src="./img/clothes/dress-9.png"
+                alt="Zip-Up Sports Hoodie"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Zip-Up Sports Hoodie</h4>
+                <p class="mt-2 text-primary font-bold">$85</p>
+              </div>
+            </div>
+            <!-- Product 10 -->
+            <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-md">
+              <img
+                src="./img/clothes/dress-10.png"
+                alt="Women's Cozy Hoodie"
+                class="w-full h-72 object-cover"
+              />
+              <div class="p-4 text-center">
+                <h4 class="font-semibold">Women's Cozy Hoodie</h4>
+                <p class="mt-2 text-primary font-bold">$95</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 px-6">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl font-bold">GEN Z</h2>
+          <p class="mt-2 text-gray-300">Where Trends Are Born.</p>
+          <p class="mt-4 text-sm text-gray-400">
+            &copy; 2025 Nostra.com. All rights reserved.
+          </p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <ul class="space-y-1 text-sm">
+            <li><a href="/index.html" class="hover:text-gray-300">Home</a></li>
+            <li>
+              <a href="./collection.html" class="hover:text-gray-300"
+                >Collections</a
+              >
+            </li>
+            <li>
+             <a href="./contact.html" class="hover:text-gray-300"></a>
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center md:text-right">
+          <h3 class="font-semibold mb-2">Follow Us</h3>
+          <div class="flex justify-center md:justify-end space-x-4 text-2xl">
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

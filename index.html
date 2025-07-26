@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwind css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css">
+    <!--title-->
+    <title>Nostra</title>
+    <!--style-->
+    <link rel="stylesheet" href="./style.css">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--ifrmae-->
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body> <!-- Offer Bar -->
+    <div class="offer-bar bg-blue-800 text-white text-center py-2 text-sm">
+      <p>
+        Sign up and <strong>GET 20% OFF</strong> your first order
+        <i id="offer-close" class="fas fa-times ml-4 cursor-pointer"></i>
+      </p>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav
+      class="flex items-center justify-between px-6 py-4 shadow-md sticky top-0 bg-white z-50"
+    >
+      <h1 class="text-2xl font-bold text-primary">Nostra</h1>
+      <div class="hidden md:flex gap-6">
+        <a href="./index.html" class="hover:underline">Home</a>
+        <a href="#new-arrivals" class="hover:underline">New Arrivals</a>
+        <a href="#Most" class="hover:underline">Most Wanted</a>
+        <a href="./collection.html" class="hover:underline">Collections</a>
+        <a href="./contact.html" class="hover:underline">Contact Us</a>
+      </div>
+      <button id="side-navbar-activate" class="md:hidden text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Side Navbar -->
+    <div
+      class="side-navbar fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 transform  translate-x-full transition-transform duration-300"
+    >
+      <!-- Cancel / Close Button -->
+      <div class="flex justify-end p-4">
+        <button id="side-navbar-close" class="text-2xl focus:outline-none">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <!-- Nav Links -->
+      <div class="flex flex-col px-6 space-y-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="#new-arrivals" class="hover:underline">New Arrivals</a>
+        <a href="#most-wanted" class="hover:underline">Most Wanted</a>
+        <a href="/Gen-Z/collections.html" class="hover:underline">Collections</a>
+        <a href="/Gen-Z/contact.html" class="hover:underline">Contact Us</a>
+      </div>
+    </div>
+    <!--Click buttons-->
+    <section class="px-6">
+      <div
+        class="w-full max-w-8xl mx-auto border rounded overflow-hidden relative h-[300px]"
+      >
+        <div id="slider-images" class="flex transition-all duration-500 h-full">
+          <img
+            src="./img/hero-1.jpg"
+            class="w-1/2 h-full object-cover opacity-60"
+          />
+           <img
+            src="./img/hero-2.jpg"
+            class="w-1/2 h-full object-cover opacity-60"
+          />
+           <img
+            src="./img/hero-3.jpg"
+            class="w-1/2 h-full object-cover opacity-60"
+          />
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div
+          class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4"
+        >
+          <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold">
+            Level Up Your Style
+          </h1>
+          <h2 class="text-lg sm:text-xl mt-2">With Our Summer Collection</h2>
+          <button
+            class="mt-4 px-5 py-2 bg-white text-black rounded text-sm sm:text-base"
+          >
+            Shop Now
+          </button>
+        </div>
+        <button
+          id="slide-left"
+          class="absolute top-1/2 left-3  z-20 transform -translate-y-1/2"
+        >
+          <img
+            src="img/left-arrow.png"
+            alt="Left"
+            class="w-6 h-6 sm:w-8 sm:h-8"
+          />
+        </button>
+        <button
+          id="slide-right"
+          class="absolute top-1/2 right-3 z-20 transform -translate-y-1/2"
+        >
+          <img
+            src="./img/right-arrow.png"
+            alt="Right"
+            class="w-6 h-6 sm:w-8 sm:h-8"
+          />
+        </button>
+      </div>
+    </section>
+    <!--brands-->
+    <section class="px-6 py-10">
+      <div><h2 class="text-2xl font-bold">Brands</h2></div>
+      
+<div class="flex justify-between gap-4 flex-wrap para">
+ 
+   <div class="flex flex-col items-center"><img src="./img/brands/brand-1.png" class="w-24"><p>adidas</p></div> 
+     <div class="flex flex-col items-center" ><img src="./img/brands/brand-2.png"class="w-24"><p>Calvin</p></div> 
+      <div class="flex flex-col items-center"><img src="./img/brands/brand-3.png" class="w-24"><p>Louis</p></div>
+      <div class="flex flex-col items-center"><img src="./img/brands/brand-4.png"class="w-24"><p>Nick</p></div>
+      <div class="flex flex-col items-center"><img src="./img/brands/brand-5.png" class="w-24"><p>Micheal</p></div>
+      <div class="flex flex-col items-center" ><img src="./img/brands/brand-6.png" class="w-24"><p>Pandroma</p></div>
+      <div class="flex flex-col items-center"><img src="./img/brands/brand-7.png" class="w-24" ><p>Puma</p></div>
+ 
+      
+</div>
+      
+    </section>
+    <section class="text-center ">
+      <h4 class="text-2xl font-bold mt-2">We provided Best </h> <h1 class="text-3xl  font-bold mt-1">customers Experience</h1><p class="mt-2">We ensure that our customers have the best shopping experience</p>
+    </section>
+  <section class="m-4 flex gap-8 ">
+    <div class="border border-gray-400 rounded text-center hover:bg-slate-400 p-5">
+ <i class="fa-regular fa-face-smile text-4xl mb-4 text-black-500"></i>
+      <h4 class="text-2xl font-bold">Original Products</h4>
+      <p>We prioritize your happiness—enjoy easy returns and full refunds if you're not satisfied.</p>
+    </div>
+    <div class="border border-gray-400 rounded text-center hover:bg-slate-400 p-5 ">
+<i class="fa-solid fa-envelope text-4xl mb-4"></i>
+      <h3 class="text-2xl font-bold">Satisfaction Guarantee</h3>
+      <p>All our items are 100% authentic and sourced directly from trusted brands and manufacturers.</p>
+    </div>
+    <div class="border border-gray-400 rounded text-center hover:bg-slate-400 p-5 ">
+      <i class="fa-brands fa-shopify text-4xl mb-4"></i>
+      <h4 class="text-2xl font-bold">New Arrival Everyday</h4>
+      <p>Discover something new every day with our constantly updated product selection..</p>
+    </div>
+    <div class="border border-gray-400 rounded text-center hover:bg-slate-400 p-5 ">
+      <i class="fa-solid fa-truck text-4xl mb-4"></i>
+      <h3 class="text-2xl font-bold">Fast & Free Shipping</h3>
+      <p>Enjoy quick, reliable delivery on every order—completely free, with no minimum purchase.</p>
+    </div>
+    </section>
+    <!--New arrivals-->
+    <section id="new-arrivals"  class="bg-blue-100 py-10 px-6">
+      <h2 class="text-2xl font-bold text-center mt-2 mb-5">New Arrivals</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 group ">
+
+            <div class="h-80 overflow-hidden rounded relative">
+               <img class="w-full h-full object-cover" src="./img/na-1.jpg">
+                
+               <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+               <button class="absolute top-1/2 left-1/2 bg-white z-20 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded opacity-90 group-hover:scale-105 transition"><a href="#">Shop Now</a></button>
+             </div>
+      
+       
+     
+
+            <div class="h-80 overflow-hidden rounded relative">
+               <img class="w-full h-full object-cover" src="./img/na-2.jpg">
+                
+               <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+               <button class="absolute top-1/2 left-1/2 bg-white z-20 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded opacity-90 group-hover:scale-105 transition"><a href="#">Shop Now</a></button>
+             </div>
+          
+
+            <div class="h-80 overflow-hidden rounded relative">
+               <img class="w-full h-full object-cover" src="./img/na-3.jpg">
+                
+               <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+               <button class="absolute top-1/2 left-1/2 bg-white z-20 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded opacity-90 group-hover:scale-105 transition"><a href="#">Shop Now</a></button>
+             </div>
+            
+
+            <div class="h-80 overflow-hidden rounded relative">
+               <img class="w-full h-full object-cover" src="./img/na-4.jpg">
+                
+               <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+               <button class="absolute top-1/2 left-1/2 bg-white z-20 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 rounded opacity-90 group-hover:scale-105 transition"><a href="#">Shop Now</a></button>
+             </div>
+      </div>
+     
+    </section>
+    <!--Most Wanted-->
+    <section id="Most">
+      <h2 class="text-2xl font-bold text-center mt-3">Most Wanted</h2>
+      <div class="flex flex-nowrap overflow-x-auto space-x-6 scroll-smooth hide-scrollbar py-2">
+         <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-1.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+  <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-1.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+         <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-2.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-3.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-4.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-5.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-6.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-7.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-8.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-9.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+          <div class="flex-shrink-0 w-64 h-80 relative snap-start">
+          <img src="./img/clothes/dress-10.png" class="w-full h-full object-cover rounded">
+          <span class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-white rounded">SALE</span>
+           <button
+            class="like-btn absolute top-2 right-5 text-2xl text-black focus:outline-none"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+
+        </div>
+      </div>
+    </section>
+    <!--Offer-->
+    <section class="bg-blue-600 text-white py-10">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-6"
+      >
+        <!-- Image -->
+        <div class="w-full md:w-1/2">
+          <img
+            src="./img/limited-time.jpg"
+            alt="Limited Time Offer"
+            class="w-full rounded-lg object-cover"
+          />
+        </div>
+        <!-- Text -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h2 class="text-3xl font-bold">Limited Offer</h2>
+          <p class="mt-4 text-7xl font-bold">
+            35% OFF <br />For the first 30 customers
+          </p>
+          <button
+            class="mt-6 inline-flex items-center bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition"
+          >
+            <a href="collections.html">Shop Now</a>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+      <!-- Newsletter -->
+    <section class="text-center py-10 px-6">
+      <h2 class="text-2xl font-bold">Join Our Newsletter</h2>
+      <p class="mt-2 text-sm">
+        Get updates, offers and more straight to your inbox.
+      </p>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="mt-4 px-4 py-2 border rounded w-3/4 md:w-1/2"
+      />
+      <br />
+      <button class="mt-4 bg-blue-400 text-white px-6 py-2 rounded-full">
+        Subscribe
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-12 px-6">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Brand & Copyright -->
+        <div class="text-center md:text-left">
+          <h2 class="text-2xl font-bold">GEN Z</h2>
+          <p class="mt-2 text-gray-300">Where Trends Are Born.</p>
+          <p class="mt-4 text-sm text-gray-400">
+            &copy; 2025 GENZ.com. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="text-center md:text-left">
+          <h3 class="font-semibold mb-2">Quick Links</h3>
+          <ul class="space-y-1 text-sm">
+            <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+            <li>
+              <a href="collections.html" class="hover:text-gray-300"
+                >Collections</a
+              >
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-gray-300">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="text-center md:text-right">
+          <h3 class="font-semibold mb-2">Follow Us</h3>
+          <div class="flex justify-center md:justify-end space-x-4 text-2xl">
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-gray-300"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+     
+    <!--java script-->
+  <script src="./script.js"></script>
+ 
+    
+   
+
+      
+</body>
+</html>
